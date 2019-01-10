@@ -1,0 +1,56 @@
+## intent:goodbye 
+- okay see you later
+- hope to see you later
+- bye for now
+- till next time
+- I must go
+- bye
+- goodbye
+- see you
+- see you soon
+- good night
+- bye-bye
+- farewell
+- then bye
+- bye then
+- gotta go
+- bye bye good night
+- bye!
+- bye udo
+- bye bye bot
+- bye was nice talking to you
+- good bye
+- bye bye see you
+- bye bye see you soon
+- bye bye take care
+- I said bye
+- never mind bye
+- now bye
+- that's all goodbye
+- that's it goodbye
+- leave me alone
+- go to bed
+- goodbye for now
+- talk to you later
+- you can go now
+- get lost
+- goodbye see you later
+- alright bye
+- see ya
+- toodle-oo
+- thanks bye bye
+- okay bye
+- okay thank you bye
+- see you tomorrow
+- ok bye
+- c u
+- Bye 			
+- Goodbye
+- See you later
+- Bye bot
+- Goodbye friend
+- catch you later
+- goodnight
+- c ya
+- bye bye
+- cheers

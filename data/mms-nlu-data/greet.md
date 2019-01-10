@@ -1,0 +1,38 @@
+## intent:greet
+- Hi
+- Hey
+- Hi bot
+- Hey bot
+- Hello
+- Good morning
+- hi again
+- hi folks
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+- hey there
+- what's up?
+- howdy
+- good afternoon
+- good evening
+- hi, how are you ?
+- long time no see
+- howdy
+- hey there
+- I greet you
+- hello there
+- lovely day isn't it
+- hello again
+- just going to say hi
+- a good day
+- afternoon
+- hello hi
+- heya
+- hey man
+- hey there
+- hey buddy
+- oka
+- yo man
+- hola

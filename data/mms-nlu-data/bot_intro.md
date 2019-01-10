@@ -1,0 +1,23 @@
+## intent:bot_intro
+- what can you do
+- tell me what you do
+- who are you
+- tell me about your self
+- what do you do
+- tell me about you
+- what is your name
+- what should I call you
+- give me your name
+- what can you do?
+- what can do?
+- what is your ability?
+- what are your abilities?
+- what is the thing that you can do for me?
+- what you can provide for me?
+- what can u do?
+- what all you do?
+- what all u do?
+- what you do?
+- what can you do for me?
+- what all can you do?
+- what are your features?

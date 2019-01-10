@@ -1,0 +1,83 @@
+intents:
+- bot_intro
+- buttons
+- goodbye
+- greet
+- out_of_scope
+- user_name
+- thank
+
+
+entities:
+- name
+
+
+slots:
+  name:
+    type: text
+
+
+actions:
+- utter_bot_intro
+- utter_buttons
+- utter_goodbye
+- utter_user_name
+- utter_greet
+- utter_slots_values
+- utter_help_message
+- utter_ask_name
+- utter_default
+- utter_thank
+
+
+templates:
+  utter_bot_intro:
+  - text: "I'm a bot designed to help you finding personal loans and credit cards loans"
+  - text: "I am a chat bot designed to help you find credit cards and perosnal loans"
+  - text: "I can help you find credit cards and personal loans"
+  - text: "I am Robo Advisor to help you in finding credit cards and personal loans"
+  utter_buttons:
+  - text: "Its buttons  Choose one <br>"
+    buttons:
+    - title: "credit cards"
+      payload: "show me credit cards"
+    - title: "personal loans"
+      payload: "show me personal loans"
+  utter_user_name:
+  - text: "Hello {name} :) "
+  - text: "hi {name} !! "
+  - text: "Welcome to Chat Bot {name} !! "
+  - text: "Its Nice to Meet you  {name} . I'm Chat Robo Advisor"
+  utter_goodbye:
+  - text: "Talk to you later {name}!"
+  - text: "BYE BYE {name}!"
+  - text: "Visit us again for more queries , Bye !!"
+  - text: "Good Bye , See ya !"
+  - text: "It\'s nice talking to with you Bye Bye !!"
+  - text: "Bye Bye !!"
+  - text: "Chat with you later Bye {name}"
+  utter_greet:
+  - text: "hello whats up ? "
+  - text: "Hey How are you doing ... "
+  - text: "Hello !!"
+  - text: "Hi , How are you ?"
+  - text: "Greetings !!!"
+  - text: "Good Evening"
+  - text: "Hello , How are You"
+  - text: "Hey How\'s it going?"
+  - text: "Hey What\'s Up ?"
+  utter_default:
+  - text: "I cannot understand what you said please form your sentence again"
+  - text: "Sorry I could not Understand you Try with another sentence"
+  utter_help_message:
+  - text: "I here to help you find personal lonas and credit cards ask me something about them"
+  - text: "I can help you in finding personal loans or credit cards for you , You can ask me about them"
+  utter_ask_name:
+  - text: " Can I know your name ? :"
+  - text: " Your Good name please ? "
+  utter_thank:
+  - text: " Thank you :"
+  - text: " tq "
+  - text: " TQSM "
+  utter_slots_values:
+  - text: "Uttering slot values - You entered this {bankname}"
