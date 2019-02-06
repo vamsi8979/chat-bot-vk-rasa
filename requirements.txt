@@ -5,7 +5,7 @@ keras==2.1.6
 tqdm==4.23.3
 flask==1.0.2
 pika==0.12.0
-pyyaml==3.12
+pyyaml==4.2b4
 pytz==2018.9
 numpy==1.16.1
 redis==2.10.6
