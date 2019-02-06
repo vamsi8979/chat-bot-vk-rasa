@@ -32,17 +32,14 @@ actions:
 
 templates:
   utter_bot_intro:
-  - text: "I'm a bot designed to help you finding personal loans and credit cards loans"
-  - text: "I am a chat bot designed to help you find credit cards and perosnal loans"
-  - text: "I can help you find credit cards and personal loans"
-  - text: "I am Robo Advisor to help you in finding credit cards and personal loans"
+  - text: "I'm a bot but I dont know who I am  "
   utter_buttons:
   - text: "Its buttons  Choose one <br>"
     buttons:
-    - title: "credit cards"
-      payload: "show me credit cards"
-    - title: "personal loans"
-      payload: "show me personal loans"
+    - title: "Dont push me "
+      payload: "It does not work"
+    - title: "It does not work"
+      payload: "it does not work"
   utter_user_name:
   - text: "Hello {name} :) "
   - text: "hi {name} !! "
@@ -70,14 +67,8 @@ templates:
   - text: "I cannot understand what you said please form your sentence again"
   - text: "Sorry I could not Understand you Try with another sentence"
   utter_help_message:
-  - text: "I here to help you find personal lonas and credit cards ask me something about them"
-  - text: "I can help you in finding personal loans or credit cards for you , You can ask me about them"
-  utter_ask_name:
-  - text: " Can I know your name ? :"
-  - text: " Your Good name please ? "
+  - text: "I just do not know anything to help you I will update my self soon"
   utter_thank:
   - text: " Thank you :"
   - text: " tq "
   - text: " TQSM "
-  utter_slots_values:
-  - text: "Uttering slot values - You entered this {bankname}"
