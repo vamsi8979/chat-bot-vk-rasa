@@ -36,5 +36,3 @@
 * None
     - action_default_fallback
     - rewind
-
-
