@@ -13,19 +13,6 @@ help:
 	@echo "        Runs core server"
 	@echo "    run-nlu"
 	@echo "        Runs nlu server"
-    # remove-item alias:\curl curl -k -XPOST https://localhost:5005/conversations/default/parse -d '{"query":"hello"}'
-	# chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
-	# http://localhost:5005/conversations/default/tracker
-	# @echo "    action-server"
-	# @echo "        Starts the server for custom action."
-	# @echo "    cmdline"
-	# @echo "       This will load the assistant in your terminal for you to chat."
-	# python -m rasa_core.run --enable_api -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml -o out.log 
-	# train-nlu:
-	# python -m rasa_nlu.train -c nlu_config.yml --data data/nlu_data.md -o models --fixed_model_name nlu --project current --verbose
-	# train-core:
-	# python -m rasa_core.train -d domain.yml -s data/stories.md -o models/current/dialogue -c policies.yml
-
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
