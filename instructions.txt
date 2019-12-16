@@ -1,0 +1,197 @@
+readme.txt 
+======================================================================================
+To Update To Rasa 1.0
+pip install rasa
+
+New Commands For Rasa 1.0
+To train Rasa core and nlu
+    make train
+To Run Rasa Actions
+    make action
+To Run Rasa server
+    make run
+
+TYPE make to know which commands to use to train and run different bot agents
+
+TO know any version of package you can use
+   pip show packagename
+   ex : pip show rasa
+
+You can view all commands in Makefile
+
+Python version : Python 3.6.3
+To install Dependencies ( OLD versions less than rasa1.0 )
+    pip install -r requirements.txt 
+TO install spacy
+    pip install spacy
+    python -m spacy download en
+    pip install -U scikit-learn scipy sklearn-crfsuite
+
+Process to Add new Utter or New Intent : 
+ 1. Add Intent name and example sentences in data/nlu.md folder by writing in nlu file.
+ 2. Add Intent name in domain.yml file .
+ 3. If there are any entities to extract specify them in domain.yml file in slots section
+ 4. write an action for that Intent in domain.yml either it can be utter_< intent name > or action_< intent name >
+ 5. if it is utter we can specify a template directly in domain.yml in templates section
+ 6. if it is an action then we should write a class for that action in actions.py
+ 7. Then Write a story for that intent + action in mms-stories.md
+ 8. Done !!
+
+ Rasa NLU and Rasa Core Process : (OLD version less than rasa  1.0)
+ 1 . Train nlu data to understand user inputs by passing config file and training data files
+ 2 . Train Core to Process user inputs and predict what to say to user by passing domain.yml , stories and dilog model
+ 3 . Run Action server to run python script for custom actions
+ 4 . Run core server to enable rasa core api for making api calls
+ 5 . Steps 1 and 2 are combined in latest 1.0.x version of rasa by rasa train cmd 
+
+When bot receives a message from user 
+i .  It identifies intent
+ii.  Extract entites and fills slots if there are any.
+iii. Go to stories and runs action according to that particular intent
+iv.  An Action can be utter_ or custom action
+v.   Utter aciton goes to domain.yml template and cusom action goes to python script action.py 
+
+Template for Defining Action in action.py
+
+class ActionIntentName(Action):
+    def name(self):
+        return "action_intent_name"
+    def run(self , dispatcher , tracker , domain ):
+        # Process the code here
+        # we can do any API calls or utter templates from domain file also
+        # dispatcher.utter_message(" Any message you need to give to user  ")
+
+Note : We also can generate new stories by running interactive mode ( it is more  effective )
+
+Format For domain.yml
+
+intents:
+entities:
+slots:
+actions:
+templates:
+
+======================================================================================
+
+requirements.txt
+
+
+
+## Setup py requirements
+six==1.11.0
+h5py==2.7.1
+keras==2.1.6
+tqdm==4.23.3
+flask==1.0.2
+pika==0.12.0
+pyyaml==3.12
+pytz==2018.9
+numpy==1.16.1
+redis==2.10.6
+typing==3.6.4
+networkx==2.2
+gevent==1.4.0
+spacy==2.0.12
+future==0.17.1
+nltk==3.4
+pymongo==3.7.2
+jsonpickle==1.1
+packaging==18.0
+requests==2.21.0
+rasa_nlu==0.14.3
+colorhash==1.0.2
+pykwalify==1.7.0
+fakeredis==0.10.3
+rasa_core==0.13.1
+coloredlogs==10.0
+flask_cors==3.0.4
+jsonschema==2.6.0
+apscheduler==3.5.1
+tensorflow==1.12.0
+ruamel.yaml==0.15.37
+scikit-learn==0.20.2
+rasa_core_sdk==0.12.1
+python-dateutil==2.7.3
+ConfigArgParse==0.13.0
+sklearn_crfsuite==0.3.6
+
+======================================================================================
+Instructions.txt
+
+Instructions:
+1.To create a new Agent  , create a folder and open command prompt in that folder
+type rasa init
+that creates basic template required for Bot
+
+Explaination of contents in folder
+
+The data folder contains two files nlu.md and stories.md
+nlu.md: file
+    - This file is for data which is used for training Bot
+    - the training data is written by writing intent name and example queries
+    - its better to give 10 to 15 examples for training  data
+    - and its better to have similar number of intent examples
+    - you can find other information here : https://rasa.com/docs/rasa/nlu/training-data-format/
+stories.md: file
+    - the story file contains the process of rasa when it identifies an intent
+    - we write an intent and specify which action to take we can specify more than one action
+    - you can find other information here : https://rasa.com/docs/rasa/core/stories/
+models: folder
+    - the trained models are present here in zip format.
+    - before rasa version 1.0 the folder contains rasa nlu and rasa core seperate.
+    - the bot loads latest trained model automatically when we run server
+init.py: file
+    we dont use this file for now.
+actions.py: file
+    - acitons.py is python script in which we write our custom actions
+    - here we write code and process data and send reply to user
+    - you can find other information here : https://rasa.com/docs/rasa/core/actions/#custom-actions
+config.yml: file
+    - this file is used for defining policies and pipelines
+    - they reflect in identifying intents and bot's behaviours
+    - please view : https://rasa.com/docs/rasa/core/policies/
+                  : https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/
+                  : https://rasa.com/docs/rasa/nlu/entity-extraction/
+                  : https://rasa.com/docs/rasa/nlu/components/
+credentials.yml: file
+    - we specify an empty rest: config to enable REST calls and we pass this file when we run server
+    - it can we used for specifiying app token and authorization
+domain.yml: file
+    - domain.yml is used to define the intents , actions and action templates
+    - please view : https://rasa.com/docs/rasa/core/domains/
+endpoints.yml: file
+    - it is used for specifiying endpoint for action server and also tracker store.
+
+When bot receives a message from user 
+- It identifies intent
+- Extract entites and fills slots if there are any.
+- Go to stories and runs action according to that particular intent
+- An Action can be utter_ or custom action
+- Utter aciton goes to domain.yml template and cusom action goes to python script action.py 
+
+You can write stories by using interactive learning
+- https://rasa.com/docs/rasa/core/interactive-learning/
+
+When You add a new Bot :
+1. Add that bot folder name in Agents.json file
+2. create a makefile which is similar to other bots already present
+3. write a new port number such as 6006,6007 and 6008 and so on (6006 and 6007 alreay exists)
+4. Personal_Loans_and_Credit_Cards_Agent  is the main bot its default PORT is 5005
+please view https://rasa.com/docs/rasa/user-guide/command-line-interface/ for more details
+
+
+Makefile is used to run commands in simple way
+To train a specific bot go to that bot folder and type 
+make train
+To run server
+make run
+
+You can view makefiles as reference in other bot folder that are already exists
+download and install for windows http://gnuwin32.sourceforge.net/packages/make.htm
+TYPE "make" in terminal or command prompt to know which commands to use to train and run different bot agents
+
+please view rasa docs for better understanding of rasa : https://rasa.com/docs/rasa/
+
+
+
+
