@@ -24,7 +24,7 @@ pykwalify==1.7.0
 fakeredis==0.10.3
 rasa_core==0.13.1
 coloredlogs==10.0
-flask_cors==3.0.4
+flask_cors==3.0.9
 jsonschema==2.6.0
 apscheduler==3.5.1
 tensorflow==2.5.1
