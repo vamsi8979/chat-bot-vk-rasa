@@ -27,7 +27,7 @@ coloredlogs==10.0
 flask_cors==3.0.9
 jsonschema==2.6.0
 apscheduler==3.5.1
-tensorflow==2.5.2
+tensorflow==2.11.1
 ruamel.yaml==0.15.37
 scikit-learn==0.20.2
 rasa_core_sdk==0.12.1
