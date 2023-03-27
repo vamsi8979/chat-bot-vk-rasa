@@ -8,7 +8,7 @@ pika==0.12.0
 pyyaml==5.4
 pytz==2018.9
 numpy==1.16.1
-redis==2.10.6
+redis==4.5.3
 typing==3.6.4
 networkx==2.2
 gevent==1.4.0
