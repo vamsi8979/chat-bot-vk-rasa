@@ -17,7 +17,7 @@ future==0.17.1
 pymongo==3.7.2
 jsonpickle==1.1
 packaging==18.0
-requests==2.21.0
+requests==2.31.0
 rasa_nlu==0.14.3
 colorhash==1.0.2
 pykwalify==1.7.0
